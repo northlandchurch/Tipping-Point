@@ -1,0 +1,20 @@
+// Calculator results
+
+.section--calculator {
+	.calc-section {
+		label {
+			margin-bottom: 0;
+		}
+		.results {
+	        text-align: left;
+	        font-size: rem-calc(24);
+	        font-family: $font-family-sans-serif;
+	        margin-bottom: rem-calc(16);
+	        span {
+		        color: $green;
+		        font-size: 40px;
+		        line-height: 50px;
+		    }
+	    }
+	}
+}

@@ -1,0 +1,68 @@
+// Navigation
+
+.northland-back {
+    margin: 0;
+    padding-top: rem-calc(5);
+    padding-bottom: rem-calc(5);
+    font-style: italic;
+
+    a {
+        color: $white;
+        font-weight: 300;
+        font-size: rem-calc(14);
+        &:hover,
+        &:focus {
+            color: darken($white, 05%);
+        }
+        @media screen and (min-width: 0) and (max-width: 80em) {
+            padding-left: rem-calc(10);
+        }
+    }
+}
+
+.title-area__logo {
+    max-height: rem-calc(70);
+    padding-top: rem-calc(8);
+    padding-bottom: rem-calc(10);
+}
+.contain-to-grid {
+    background: none;
+}
+.top-bar-section {
+    ul {
+        li {
+            a {
+                text-transform: uppercase;
+                letter-spacing: rem-calc(1);
+                font-size: rem-calc(12);
+                padding: rem-calc(0 19);
+                @media screen and (min-width: 641px) and (max-width: 768px) {
+                    padding: rem-calc(0 14) !important;
+                }
+                @media #{$small-only} {
+                    text-align: center;
+                    line-height: rem-calc(30);
+                }
+            }
+        }
+        li.share:not(.has-form) {
+            a:not(.button) {
+                background: $green;
+                font-size: rem-calc(15);
+                font-weight: 500;
+                padding: rem-calc(0 33);
+                @media screen and (min-width: 641px) and (max-width: 768px) {
+                    padding: rem-calc(0 16);
+                }
+                @media #{$small-only} {
+                    text-align: center;
+                    line-height: rem-calc(30);
+                }
+                &:hover,
+                &:focus {
+                    background: darken($green, 05%);
+                }
+            }
+        }
+    }
+}

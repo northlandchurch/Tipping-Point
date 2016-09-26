@@ -1,0 +1,13 @@
+.section {
+
+    &.section--videos {
+        background-color: rgb(35, 36, 46);
+        color: $white;
+    }
+
+    &.section--what {
+        background-color: #30323F;
+        color: $white;
+    }
+
+}

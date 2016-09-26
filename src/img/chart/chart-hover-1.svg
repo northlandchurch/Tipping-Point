@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="500px" height="499px" viewBox="0 0 500 499" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>whole chart copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Tipping-Point-Landing-Page" sketch:type="MSArtboardGroup" transform="translate(-470.000000, -1398.000000)">
+            <g id="TP-Landing-Page" sketch:type="MSLayerGroup" transform="translate(0.000000, -50.000000)">
+                <g id="Interactive-Chart" transform="translate(50.000000, 1304.000000)" sketch:type="MSShapeGroup">
+                    <g id="pie-chart-hovered" transform="translate(347.000000, 69.000000)">
+                        <g id="whole-chart-copy" transform="translate(323.466790, 323.820816) rotate(-21.000000) translate(-323.466790, -323.820816) translate(72.966790, 73.820816)">
+                            <g id="masked-chart" transform="translate(250.000000, 250.272865) rotate(-90.000000) translate(-250.000000, -250.272865) translate(0.500000, 0.272865)">
+                                <path d="M325.812063,40.332407 L53.0229438,39.7442262 C53.0229438,39.7442262 34.2912913,76.9647442 44.1955893,111.811323 C54.0998873,146.657901 63.0164284,172.208328 63.0164284,172.208328 L325.812063,40.332407 Z" id="Path-4" opacity="0.300000012" fill="#EA615A" transform="translate(183.558882, 105.976277) rotate(-270.000000) translate(-183.558882, -105.976277) "></path>
+                                <path d="M250.453749,57.4622999 L-23.2409854,88.6306226 C-23.2409854,88.6306226 -15.8166167,139.33068 -10.2696897,161.165738 C-4.72276262,183.000797 31.6938588,246.44285 31.6938588,246.44285 L250.453749,57.4622999 Z" id="Path-5" opacity="0.300000012" fill="#EE817A" transform="translate(113.606382, 151.952575) rotate(70.000000) translate(-113.606382, -151.952575) "></path>
+                                <path d="M249.202752,248.229459 L1.43108886,108.55362 C1.43108886,108.55362 -34.074132,174.522531 -43.4782511,226.825899 C-52.8823701,279.129267 -43.4782512,281.187028 -43.4782512,281.187028 L249.202752,248.229459 Z" id="Path-7" opacity="0.300000012" fill="#6EBCA7"></path>
+                                <path d="M249.202752,248.229459 L-49.9349336,279.302761 C-49.9349336,279.302761 -6.50926863,428.25406 66.5791545,477.570637 C139.667578,526.887213 280.24836,526.603717 280.24836,526.603717 L249.202752,248.229459 Z" id="Path-6" fill="#61A290"></path>
+                                <path d="M249.423236,149.827836 L249.816292,-25.5922813 C249.816292,-25.5922813 516.119447,-25.1715161 524.392103,248.34142 C516.119447,498.324624 279.200198,522.980293 279.200198,522.980293 L260.174943,348.725303 C310.194649,343.347855 349.14272,301.003883 349.14272,249.564756 C349.14272,194.493431 304.500084,149.847056 249.423236,149.827836 Z" id="Path-3-Copy" opacity="0.300000012" fill="#E5423B"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

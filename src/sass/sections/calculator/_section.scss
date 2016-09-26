@@ -1,0 +1,27 @@
+// Calculator sections
+
+.section--calculator {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(50);
+    @media #{$small-only} {
+        padding-top: 0;
+    }
+
+    .calc-section {
+        margin-top: rem-calc(40);
+
+        p,
+        button {
+            margin: 0;
+        }
+        .calc-section__step {
+            font-size: rem-calc(14);
+            line-height: rem-calc(19);
+        }
+        label {
+            font-size: rem-calc(16);
+            line-height: rem-calc(23);
+            margin-bottom: rem-calc(15);
+        }
+    }
+}

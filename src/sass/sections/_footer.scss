@@ -1,0 +1,12 @@
+// Footer
+
+.section--footer {
+    background-color: $green;
+    color: $white;
+
+    p {
+        margin: 0;
+        padding-top: rem-calc(16);
+        padding-bottom: rem-calc(16);
+    }
+}

@@ -1,0 +1,72 @@
+// Pie chart images
+#pie-chart {
+	padding-top: rem-calc(25);
+}
+#pie-chart.text-center, #pie-chart-mobile {
+	#chart-svg {
+		@media only screen and (min-width: 0) and (max-width: 40em) {
+	        width: 100%;
+	    }
+		#mask {
+			opacity: 0;
+		}
+	    #community, #world, #future, #freedom, #congregatio {
+	    	opacity: .3;
+	    	&:hover {
+	    		opacity: 1;
+	    		cursor: pointer;
+	    	}
+	    }
+	}
+	.two-year-bg {
+		background: url('/img/chart/bg-2-year.png');
+	}
+	.community-bg {
+		background: url('/img/chart/bg-our-community.png');
+	}
+	.world-bg {
+		background: url('/img/chart/bg-our-world.png');
+	}
+	.future-bg {
+		background: url('/img/chart/bg-our-future.png');
+	}
+	.freedom-bg {
+		background: url('/img/chart/bg-our-freedom.png');
+	}
+	.congregation-bg {
+		background: url('/img/chart/bg-our-church.png');
+	}
+	.two-year-bg, .community-bg, .world-bg, .future-bg, .freedom-bg, .congregation-bg {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+#pie-chart.text-left {
+	#chart-svg {
+		#mask {
+			opacity: 0;
+		}
+		#community, #world, #future, #freedom, #congregatio {
+	    	opacity: .3;
+	    	&:hover {
+	    		opacity: .3;
+	    		cursor: pointer;
+	    	}
+	    }
+	    .community-bg-hover, .world-bg-hover, .future-bg-hover, .freedom-bg-hover, .congregation-bg-hover {
+	    	opacity: 1 !important;
+	    }
+	}
+}
+.info-bars {
+	@media only screen and (min-width: 0) and (max-width: 40em) {
+        display: none;
+    }
+	img {
+		margin-top: 50%;
+	}
+}
+.close-chart-info {
+	
+}

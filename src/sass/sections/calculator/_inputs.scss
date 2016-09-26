@@ -1,0 +1,95 @@
+// Calculator inputs
+
+.calc-section {
+    input,
+    select {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: rem-calc(40);
+        height: inherit;
+        background-color: transparent;
+    }
+
+    .input-row {
+        &.input-row--border {
+            border-bottom: 1px solid rgba($white, 0.2);
+        }
+
+        input[name="earnings"] {
+            font-size: rem-calc(70);
+            line-height: rem-calc(84);
+            font-weight: 300;
+            @media #{$small-only} {
+                font-size: rem-calc(45);
+                line-height: rem-calc(55);
+            }
+        }
+
+        input[name="earnings"],
+        select[name="timeframe"] {
+            width: 50%;
+            float: left;
+        }
+
+        select[name="timeframe"] {
+            font-size: rem-calc(30);
+            line-height: rem-calc(84);
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAAXNSR0IArs4c6QAAAINJREFUKBVjZCARFB1ev4eZhdn5399/YJ1MzEwMf//83dtnG+iCzSgmbIJ4xX79qfv39/9XRkZGBhAGsRmAYrj0kGxBr3PI8f///m1hZmVlAGEQGyRGNQuA7gaa+Xvin1+/voMwiA0Sw2UB2eKFh9atBmFCBrAQUoBLnpHpfy8uOWRxACa3Oq3+YQobAAAAAElFTkSuQmCC);
+            border-left: 1px solid rgba($white, 0.2);
+            padding-left: rem-calc(16);
+            @media #{$small-only} {
+                font-size: rem-calc(22);
+                line-height: rem-calc(55);
+            }
+        }
+
+        input[name="percent"] {
+            outline: 0;
+            padding: 0 !important;
+            padding-right: rem-calc(16);
+            width: 80%;
+            float: left;
+            margin-top: rem-calc(25);
+            // more in utilities/range
+            @media #{$medium-up} {
+                width: 85%;
+            }
+        }
+
+        .percent-show {
+            font-family: $font-family-sans-serif;
+            font-size: rem-calc(30);
+            text-align: center;
+            width: 20%;
+            margin: 0;
+            float: left;
+            padding-left: rem-calc(10);
+            @media #{$medium-up} {
+                width: 15%;
+            }
+        }
+    }
+
+    .calc-section__step {
+        color: $red;
+        font-family: $font-family-sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .calc-section__label {
+        color: $white-off;
+        font-family: $font-family-sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .button-submit {
+        width: 100%;
+        outline: 0;
+    }
+}

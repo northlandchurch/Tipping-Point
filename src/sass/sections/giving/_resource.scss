@@ -1,0 +1,56 @@
+// resource giving
+
+.section--giving {
+
+    .resource {
+        background: rgb(48, 50, 64);
+        background: linear-gradient(rgba(48, 50, 64, 0), rgba(48, 50, 64, 0.8), rgba(48, 50, 64, 1)), url('/img/backgrounds/resource-small.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        -webkit-background-size: cover;
+           -moz-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+        padding-top: 0;
+        padding-bottom: rem-calc(240);
+        position: relative;
+        @media #{$small-only} {
+            padding-bottom: rem-calc(70);
+        }
+        &::before {
+            content: ' ';
+            position: absolute;
+            width: rem-calc(1);
+            height: rem-calc(70);
+            background: $green;
+            left: 50.25%;
+            @media #{$small-only} {
+                display: none;
+            }
+        }
+        &::after {
+            content: ' ';
+            position: absolute;
+            right: 50%;
+            width: rem-calc(16);
+            height: rem-calc(16);
+            background: url('/img/timeline-oval.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 50%;
+            margin-right: -12px;
+            top: 70px;
+            @media #{$small-only} {
+                display: none;
+            }
+        }
+        .hero__header {
+            padding-top: rem-calc(144);
+            @media #{$small-only} {
+                padding-top: rem-calc(30);
+            }
+        }
+    }
+
+}

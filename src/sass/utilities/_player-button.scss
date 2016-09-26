@@ -1,0 +1,41 @@
+// player button
+
+.player-button {
+    position: relative;
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 1;
+        content: ' ';
+        display: block;
+        background-image: url('/img/videos/play_button.png');
+        transition: 300ms background-image ease-in-out;
+        width: rem-calc(100);
+        height: rem-calc(100);
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &:before {
+            background-image: url('/img/videos/play_button-hover.png');
+        }
+    }
+
+    &.player-button--alt,
+    .player-button--alt {
+        &:before {
+            background-image: url('/img/videos/play_button-alt.png');
+            width: rem-calc(60);
+            height: rem-calc(60);
+        }
+    }
+}

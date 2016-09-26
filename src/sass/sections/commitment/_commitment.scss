@@ -1,0 +1,133 @@
+.section--commitment {
+    background-color: $blue-dark;
+    color: $white;
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(50);
+
+    .commitment-hero {
+        .hero__header {
+            font-family: $font-family-sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $green;
+            font-weight: 600;
+            padding-top: rem-calc(85);
+            font-size: rem-calc(18);
+            line-height: rem-calc(25);
+            @media #{$small-only} {
+                padding-top: 0;
+            }
+            span {
+                width: 100%;
+            }
+        }
+
+        .hero__heading {
+            font-size: rem-calc(50);
+            line-height: rem-calc(55);
+            margin-bottom: rem-calc(40);
+            color: $white;
+            @media #{$small-only} {
+                font-size: rem-calc(35);
+                line-height: rem-calc(40);
+            }
+        }
+        .hero__body {
+            color: $white;
+            color: rgba($white, 0.8);
+            font-size: rem-calc(19);
+            line-height: rem-calc(28);
+            font-family: $font-family-serif;
+            max-width: rem-calc(750);
+            margin: 35px auto 75px auto;
+
+            &::after {
+                margin-top: rem-calc(35);
+                content: ' ';
+                display: block;
+                position: absolute;
+                width: 5%;
+                height: 1px;
+                background-color: rgba($white, 0.7);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    input, select {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: rem-calc(28);
+        line-height: rem-calc(40);
+        height: inherit;
+        background-color: transparent;
+    }
+    input[type="number"], input[type="text"], input[type="text"][readonly] {
+        border-bottom: 1px solid rgba($white, 0.2);
+        padding-left: rem-calc(7);
+        margin-bottom: rem-calc(15);
+        background-color: transparent;
+    }
+    #normal-commitment, #additional-commitment, #resource-commitment {
+        width: 98%;
+        display: inline-block;
+        &:before {
+            content: "$";
+            color: $white;
+        }
+    }
+    span {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+        display: inline-block;
+        width: 2%;
+    }
+    select {
+        font-size: rem-calc(28);
+        line-height: rem-calc(55);
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAAXNSR0IArs4c6QAAAINJREFUKBVjZCARFB1ev4eZhdn5399/YJ1MzEwMf//83dtnG+iCzSgmbIJ4xX79qfv39/9XRkZGBhAGsRmAYrj0kGxBr3PI8f///m1hZmVlAGEQGyRGNQuA7gaa+Xvin1+/voMwiA0Sw2UB2eKFh9atBmFCBrAQUoBLnpHpfy8uOWRxACa3Oq3+YQobAAAAAElFTkSuQmCC);
+        border-bottom: 1px solid rgba($white, 0.2);
+        padding-left: rem-calc(7);
+        outline: none;
+        margin-bottom: rem-calc(25);
+        @media #{$small-only} {
+            font-size: rem-calc(22);
+            line-height: rem-calc(55);
+        }
+    }
+    .commitment-section__label {
+        color: $white-off;
+        font-family: $font-family-sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-align: left;
+    }
+    .commitment-section__step {
+        color: $red;
+        font-family: $font-family-sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin: 0;
+    }
+    button {
+        width: 100%;
+    }
+    .button-submit {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 3px solid $green;
+        padding: rem-calc(16 32);
+        font-size: rem-calc(16);
+        line-height: 1;
+        width: 100%;
+    }
+    #total-commitment {
+        color: $green;
+        font-size: 40px;
+        line-height: 50px;
+    }
+}

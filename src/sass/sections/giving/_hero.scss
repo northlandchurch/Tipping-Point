@@ -1,0 +1,109 @@
+.section--giving {
+
+    .giving-hero {
+
+        .hero__header {
+            font-family: $font-family-sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $green;
+            font-weight: 600;
+            padding-top: rem-calc(85);
+            font-size: rem-calc(18);
+            line-height: rem-calc(25);
+            @media #{$small-only} {
+                padding-top: 0;
+            }
+        }
+
+        .hero__heading {
+            font-size: rem-calc(50);
+            line-height: rem-calc(55);
+            margin-bottom: rem-calc(40);
+            @media #{$small-only} {
+                font-size: rem-calc(35);
+                line-height: rem-calc(40);
+            }
+        }
+
+        .hero__body {
+            color: $white;
+            color: rgba($white, 0.8);
+            font-size: rem-calc(19);
+            line-height: rem-calc(28);
+            font-family: $font-family-serif;
+            max-width: rem-calc(750);
+            margin: 35px auto 75px auto;
+
+            &::after {
+                margin-top: rem-calc(35);
+                content: ' ';
+                display: block;
+                position: absolute;
+                width: 5%;
+                height: 1px;
+                background-color: rgba($white, 0.7);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .hero__quote {
+            border: 0;
+            margin: 0;
+            margin-top: rem-calc(65);
+            color: $white;
+            font-size: rem-calc(24);
+            line-height: rem-calc(30);
+            font-style: italic;
+            padding: rem-calc(0 0 115 0);
+
+            cite {
+                color: $white;
+                font-style: normal;
+                font-weight: 300;
+
+                &::before {
+                    content: ' ';
+                }
+            }
+        }
+
+        .hero__video-button {
+            background-color: $green;
+            margin-top: 0;
+
+            .video-button__img {
+                width: 100%;
+                height: rem-calc(70);
+                @media #{$small-only} {
+                    height: auto;
+                }
+            }
+
+            .video-button__content {
+                padding-top: rem-calc(14);
+                padding-bottom: rem-calc(14);
+
+                h2,
+                p {
+                    margin: 0;
+                    line-height: 1;
+                }
+
+                h2 {
+                    font-size: rem-calc(18);
+                }
+
+                p {
+                    font-size: rem-calc(16);
+                    color: $black;
+                    font-weight: 300;
+                    margin-top: rem-calc(8);
+                }
+            }
+        }
+
+    }
+
+}

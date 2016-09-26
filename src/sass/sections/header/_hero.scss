@@ -1,0 +1,66 @@
+// hero
+
+.hero {
+    background: rgb(35, 36, 46);
+    background: linear-gradient(rgba(35, 36, 46, 0.1), rgba(35, 36, 46, 1)), url('/img/backgrounds/mountains-large.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    @media #{$small-only} {
+        background: rgb(35, 36, 46);
+        background: linear-gradient(rgba(35, 36, 46, 0.1), rgba(35, 36, 46, 1)), url('/img/backgrounds/mountains-small.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+           -moz-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+    }
+
+    .hero__content {
+        padding-top: rem-calc(75);
+        padding-bottom: rem-calc(25);
+
+        h1 {
+            font-size: rem-calc(60);
+            line-height: rem-calc(86);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: $white;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
+            @media #{$small-only} {
+                font-size: rem-calc(30);
+                line-height: rem-calc(50);
+            }
+            span {
+                font-size: rem-calc(90);
+                line-height: rem-calc(130);
+                @media #{$small-only} {
+                    font-size: rem-calc(45);
+                    line-height: rem-calc(60);
+                }
+            }
+        }
+
+        .button {
+            margin-top: rem-calc(35);
+        }
+
+        .hero__bottom {
+            margin: 0;
+            margin-top: rem-calc(100);
+            color: rgba($white, 0.7);
+            font-family: $font-family-sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: rem-calc(14);
+            line-height: rem-calc(19);
+            @media #{$small-only} {
+                margin-top: rem-calc(30);
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+// Videos
+
+.videos {
+    padding-bottom: rem-calc(35);
+    padding-top: rem-calc(50);
+
+    .video {
+        .video__img {
+            img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .video__heading {
+            font-size: rem-calc(14);
+            line-height: rem-calc(19);
+            color: $green;
+            margin-top: rem-calc(16);
+        }
+
+        .video__description {
+            font-size: rem-calc(13);
+            line-height: rem-calc(17);
+            font-family: $font-family-serif;
+        }
+    }
+
+}

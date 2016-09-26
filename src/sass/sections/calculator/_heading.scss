@@ -1,0 +1,22 @@
+// Calculator
+
+.section--calculator {
+    background-color: $blue-dark;
+    color: $white;
+
+    .calc-header {
+        h1 {
+            color: $white;
+            font-size: rem-calc(40);
+            line-height: rem-calc(58);
+            @media #{$small-only} {
+                font-size: rem-calc(35);
+                line-height: rem-calc(40);
+            }
+        }
+
+        p {
+            color: rgba($white, 0.8);
+        }
+    }
+}

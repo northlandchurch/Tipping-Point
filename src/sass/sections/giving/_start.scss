@@ -1,0 +1,103 @@
+// start giving
+
+.section--giving {
+    h1, h2, h3, h4, h5, h6 {
+        color: $white;
+    }
+
+    .start {
+        position: relative;
+        background: rgb(48, 50, 63);
+        background: linear-gradient(rgba(48, 50, 63, 1), rgba(35, 36, 46, 0.8), rgba(35, 36, 46, 0)), url('/img/backgrounds/mountains-alt.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+           -moz-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+        padding-top: rem-calc(50);
+        color: $white;
+        @media #{$small-only} {
+            background: rgb(48, 50, 63);
+            background: linear-gradient(rgba(48, 50, 63, 1), rgba(35, 36, 46, 0.8), rgba(35, 36, 46, 0)), url('/img/backgrounds/mountains-alt-medium.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+               -moz-background-size: cover;
+                 -o-background-size: cover;
+                    background-size: cover;
+        }
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            right: 50%;
+            width: rem-calc(16);
+            height: rem-calc(16);
+            background: url('/img/timeline-oval.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 50%;
+            margin-right: -12px;
+            bottom: 66px;
+            @media #{$small-only} {
+                display: none;
+            }
+        }
+        &::after {
+            content: ' ';
+            position: absolute;
+            left: 50.25%;
+            width: rem-calc(1);
+            height: rem-calc(70);
+            background: $green;
+            bottom: -4px;
+            z-index: 10;
+            @media #{$small-only} {
+                display: none;
+            }
+        }
+        .hero__heading {
+            font-size: rem-calc(50);
+            line-height: rem-calc(55);
+            margin-bottom: rem-calc(30);
+            @media #{$small-only} {
+                font-size: rem-calc(35);
+                line-height: rem-calc(40);
+            }
+        }
+        .hero__subheading {
+            font-family: $font-family-sans-serif;
+            font-weight: 500;
+            font-size: rem-calc(35);
+            line-height: rem-calc(45);
+            margin-bottom: rem-calc(15);
+            text-transform: uppercase;
+            @media #{$small-only} {
+                font-size: rem-calc(25);
+                line-height: rem-calc(30);
+            }
+        }
+        .hero__header {
+            font-family: $font-family-sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $green;
+            font-weight: 600;
+            padding-top: 0;
+            font-size: rem-calc(18);
+            line-height: rem-calc(25);
+            @media #{$small-only} {
+                padding-top: 0;
+            }
+        }
+        .hero__quote {
+            padding-bottom: rem-calc(135);
+            @media #{$small-only} {
+                padding-bottom: rem-calc(30);
+            }
+        }
+    }
+
+}

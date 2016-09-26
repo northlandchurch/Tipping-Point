@@ -1,0 +1,76 @@
+@import "colors";
+@import "settings";
+@import "../../bower_components/foundation/scss/foundation";
+
+@import "utilities/player-button";
+@import "utilities/range";
+
+@import "sections/sections";
+@import "sections/videos";
+@import "sections/what";
+
+@import "sections/header/hero";
+@import "sections/header/nav";
+
+@import "sections/pie-chart/pie-chart-img";
+@import "sections/pie-chart/pie-chart-sections";
+
+@import "sections/commitment/commitment";
+
+@import "sections/giving/hero";
+@import "sections/giving/start";
+@import "sections/giving/timeline";
+@import "sections/giving/resource";
+
+@import "sections/calculator/section";
+@import "sections/calculator/heading";
+@import "sections/calculator/inputs";
+@import "sections/calculator/results";
+
+@import "sections/footer";
+
+.button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid $green;
+}
+.button-large {
+	@extend .button;
+	padding-left: rem-calc(65);
+	padding-right: rem-calc(65);
+	font-size: rem-calc(18);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+// background-image preloading
+body:after {
+    display: none;
+    content: url('/img/videos/play_button-hover.png');
+}
+
+.f-topbar-fixed {
+    padding-top: 0 !important;
+}
+
+.flex-video-new {
+  position: relative;
+  padding-top: 1.5625rem;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 1rem;
+  overflow: hidden; }
+  .flex-video-new.widescreen {
+    padding-bottom: 57.25%; }
+  .flex-video-new.vimeo {
+    padding-top: 0; }
+  .flex-video-new iframe, .flex-video-new object, .flex-video-new embed, .flex-video-new video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
