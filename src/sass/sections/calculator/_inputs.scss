@@ -55,6 +55,22 @@
             @media #{$medium-up} {
                 width: 85%;
             }
+            &::-ms-track {
+                background: transparent;
+    
+                /*leave room for the larger thumb to overflow with a transparent border */
+                border-color: transparent;
+                border-width: rem-calc(17) 0;
+
+                /*remove default tick marks*/
+                color: transparent;
+            }
+            &::-ms-thumb {
+                border: none;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+            }
         }
 
         .percent-show {

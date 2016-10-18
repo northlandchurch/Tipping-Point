@@ -291,7 +291,15 @@
         <section class="section section--what" id="budget">
             <div class="row">
                 <div class="text-center small-12 columns">
-                    <h1>What Is This Campaign?</h1>
+                    <h1>What Is The Funding Impact?</h1>
+                    <p>
+                      All contributions will go into one fund, which will resource ongoing church ministry
+                      efforts while eliminating our building debt and funding future expansion over a two-year
+                      period, totaling $40 million. The red sections are the church programs that the congregation
+                      is already funding through current tithes and offerings. The green sections are needs within
+                      the next two years to eliminate our mortgage debt and invest in immediate opportunities to
+                      plant distributed church networks locally and globally.
+                    </p>
                     <p>Click a piece of the pie to see more details on Northland’s budget.</p>
                 </div>
             </div>
@@ -324,7 +332,7 @@
                                                     <g id="freedom" transform="translate(1.000000, 260.000000)" fill="#61A290">
                                                         <path d="M149.008589,0.336335086 L0.220774682,15.4963004 C0.220774682,15.4963004 2.40735915,111.939542 89.4376326,183.671094 C176.467906,255.402646 275.484195,239.686825 275.484195,239.686825 L259.200438,90.7906263 C255.648705,91.1734513 252.041117,91.3698549 248.387657,91.3698549 C196.233047,91.3698549 153.426667,51.3453242 149.008589,0.336335086 Z" id="Path-6"></path>
                                                     </g>
-                                                    <g id="congregatio" transform="translate(249.000000, 1.000000)" fill="#E5423B">
+                                                    <g id="congregation" transform="translate(249.000000, 1.000000)" fill="#E5423B">
                                                         <path d="M0.20275188,150.827985 L0.20275188,0.928768214 C0.20275188,0.928768214 80.6785667,-3.06179404 153.104989,53.5433443 C225.531411,110.148483 249.641915,175.618542 249.641915,249.229461 C249.641915,286.247561 248.65429,350.064928 181.199609,422.297915 C113.744927,494.530903 27.4997203,498.623218 27.4997203,498.623218 L11.2020339,349.722387 C61.2087114,344.332565 100.14272,301.994596 100.14272,250.564756 C100.14272,195.481573 55.4808574,150.82783 0.387657383,150.82783 C0.326009137,150.82783 0.264373953,150.827886 0.202751878,150.827997 Z" id="Path-3-Copy-2"></path>
                                                     </g>
                                                 </g>
@@ -364,7 +372,7 @@
                                                     <g id="freedom" transform="translate(1.000000, 260.000000)" fill="#61A290">
                                                         <path d="M149.008589,0.336335086 L0.220774682,15.4963004 C0.220774682,15.4963004 2.40735915,111.939542 89.4376326,183.671094 C176.467906,255.402646 275.484195,239.686825 275.484195,239.686825 L259.200438,90.7906263 C255.648705,91.1734513 252.041117,91.3698549 248.387657,91.3698549 C196.233047,91.3698549 153.426667,51.3453242 149.008589,0.336335086 Z" id="Path-6"></path>
                                                     </g>
-                                                    <g id="congregatio" transform="translate(249.000000, 1.000000)" fill="#E5423B">
+                                                    <g id="congregation" transform="translate(249.000000, 1.000000)" fill="#E5423B">
                                                         <path d="M0.20275188,150.827985 L0.20275188,0.928768214 C0.20275188,0.928768214 80.6785667,-3.06179404 153.104989,53.5433443 C225.531411,110.148483 249.641915,175.618542 249.641915,249.229461 C249.641915,286.247561 248.65429,350.064928 181.199609,422.297915 C113.744927,494.530903 27.4997203,498.623218 27.4997203,498.623218 L11.2020339,349.722387 C61.2087114,344.332565 100.14272,301.994596 100.14272,250.564756 C100.14272,195.481573 55.4808574,150.82783 0.387657383,150.82783 C0.326009137,150.82783 0.264373953,150.827886 0.202751878,150.827997 Z" id="Path-3-Copy-2"></path>
                                                     </g>
                                                 </g>
@@ -423,7 +431,7 @@
                     </div>
 
                     <div id="pie-info-congregation" class="pie-chart__section pie-chart__section--congregation small-only-text-center hide">
-                        <h2 class="section__title">Equipping Our Congregation</h2>
+                        <h2 class="section__title">Equipping Our Ministries</h2>
                         <p class="section__cost">$18,864,158</p>
                         <p class="section__body">Worship, Discipleship, Pastoral Care, Mobilization, Administration, Technology, Infrastructure</p>
                         <a href="#pie-chart-mobile" class="button close-chart-info show-for-small-only">Close</a>
@@ -464,7 +472,7 @@
                         <label class="calc-section__label" for="earnings">What % would you like to give?</label>
 
                         <div class="input-row clearfix">
-                            <input name="percent" type="range" min=".01" value=".05" max=".25" step=".01">
+                            <input id="slider" name="percent" type="range" min=".01" value=".05" max=".25" step=".01">
                             <div class="percent-show"></div>
                         </div>
                     </section>
@@ -496,7 +504,7 @@
                     <div class="small-12 columns">
                         <p class="hero__header"><span>Commitment Card</span></p>
 
-                        <h1 class="hero__heading">My Two-Year Commitment</h1>
+                        <h1 class="hero__heading">My One-Year Commitment</h1>
 
                         <p class="hero__body">Prayer is an important part in making your commitment. Seek what you think you can do, and then confirm what the Holy Spirit is asking you to do.</p>
                     </div>
@@ -544,7 +552,7 @@
 
                                 <p><button class="button button-submit" type="button">Calculate Commitment</button></p>
 
-                                <label class="commitment-section__label">Two Year Commitment Total</label>
+                                <label class="commitment-section__label">One Year Commitment Total</label>
                                 <input id="total-commitment" type="text" name="total" value="" readonly>
 
                                 <p><input class="button button-submit" type="submit" value="Submit Commitment"></p>

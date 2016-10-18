@@ -28,6 +28,28 @@
             $('#result-month').text(prettyCurrency(result / 12));
             $("#result-week").text(prettyCurrency(result / 52));
         });
+        $('input[name=earnings], select[name=timeframe], input[name=percent]').on('change', function() {
+            var earnings  = $('input[name=earnings]').val().replace(/[^\d\.]/g, '');
+                $('input[name=earnings]').val(earnings);
+            var timeframe = $('select[name=timeframe]').val();
+            var percent   = $('input[name=percent]').val();
+
+            var result;
+
+            if(timeframe == 'year') {
+            result = earnings * percent;
+            }
+            else if(timeframe == 'month') {
+            result = (earnings*12) * percent;
+            }
+            else if(timeframe == 'week') {
+            result = (earnings*52) * percent;
+            }
+
+            $('#result-year').text(prettyCurrency(result));
+            $('#result-month').text(prettyCurrency(result / 12));
+            $("#result-week").text(prettyCurrency(result / 52));
+        });
 
         // return a currency format
         function prettyCurrency(value) {
@@ -39,18 +61,23 @@
         function percentCalc(value) {
           value = (value * 100).toFixed(0);
           $('.percent-show').text(value);
+          $('.percent-show').append("%");
         }
 
         var percentInput = $('input[name=percent]');
 
         // calc percent on input change
+        percentInput.on('change', function() {
+          percentCalc($(this).val());
+        });
+
         percentInput.on('input', function() {
           percentCalc($(this).val());
         });
 
         // calc percent on load
         percentCalc(percentInput.val());
-        $( ".percent-show" ).append( "%" );
+        //$( ".percent-show" ).append( "%" );
 
         // Commitment Card
         // ---
@@ -63,7 +90,8 @@
             var resource   = $('input[name=resource]').val().replace(/[^\d\.]/g, '');
                 $('input[name=resource]').val(resource);
 
-            var resultCommitment = ((parseFloat(normal) + parseFloat(additional)) * 2) + parseFloat(resource);
+            //var resultCommitment = ((parseFloat(normal) + parseFloat(additional)) * 2) + parseFloat(resource); //Two Year Commitment
+            var resultCommitment = ((parseFloat(normal) + parseFloat(additional)) * 1) + parseFloat(resource); //One Year Commitment
 
             $('#total-commitment').val(prettyCurrency(resultCommitment));
 
@@ -93,6 +121,13 @@
 
                 // set video src
                 modal.find('.flex-video-new iframe').attr('src', 'https://player.vimeo.com/video/' + videoId + '?autoplay=1&api=1');
+            
+                var iframe = $('#videoModal .flex-video-new iframe')[0];
+                    var player = $f(iframe);
+
+                    player.addEvent('ready', function() {
+                    player.api('play');
+                });
             }
         });
 
@@ -131,12 +166,14 @@
         });
 
         //chart animations
-        $( "#community, #world, #future, #freedom, #congregatio, .close-chart-info" ).click(function() {
-            $('#pie-chart').toggleClass( "text-left" );
-            $('#pie-chart').toggleClass( "text-center" );
-            $('#pie-chart').toggleClass( "large-centered medium-centered", "slow" );
-            $('.pie-chart__sections').toggleClass( "hide", "slow" );
-            $('#community, #world, #future, #freedom, #congregatio').attr("class", "");
+        $( "#community, #world, #future, #freedom, #congregation, .close-chart-info" ).click(function() {
+            $('.pie-chart__sections').show();
+            $('.pie-chart__section').hide();
+            $('#pie-chart').addClass( "text-left" );
+            $('#pie-chart').removeClass( "text-center" );
+            $('#pie-chart').removeClass( "large-centered medium-centered" );
+            //$('.pie-chart__sections').toggleClass( "hide", "slow" );
+            $('#community, #world, #future, #freedom, #congregation').attr("class", "");
         });
 
         //community
@@ -148,15 +185,16 @@
             }
         );
         $( "#community" ).click(function() {
-            $('.pie-chart__section--community').toggleClass( "hide", "slow" );
+            //$('.pie-chart__section--community').toggleClass( "hide", "slow" );
             $('#community').attr("class", "community-bg-hover");
             $('.info-bars').toggleClass( "hide", "slow" );
+            $('#pie-info-community').show();
         });
         $( "#pie-chart.text-left #community" ).click(function() {
             $('#chart-svg').attr("class", "community-bg");
         });
         $( ".pie-chart__section--community .close-chart-info" ).click(function() {
-            $('.pie-chart__section--community').toggleClass( "hide" );
+            $('.pie-chart__section--community').hide();
             $('.info-bars').toggleClass( "hide" );
         });
 
@@ -169,15 +207,16 @@
             }
         );
         $( "#world" ).click(function() {
-            $('.pie-chart__section--world').toggleClass( "hide", "slow" );
+            //$('.pie-chart__section--world').toggleClass( "hide", "slow" );
             $('#world').attr("class", "world-bg-hover");
             $('.info-bars').toggleClass( "hide", "slow" );
+            $('#pie-info-world').show();
         });
         $( "#pie-chart.text-left #world" ).click(function() {
             $('#chart-svg').attr("class", "world-bg");
         });
         $( ".pie-chart__section--world .close-chart-info" ).click(function() {
-            $('.pie-chart__section--world').toggleClass( "hide" );
+            $('.pie-chart__section--world').hide();
             $('.info-bars').toggleClass( "hide" );
         });
 
@@ -190,15 +229,16 @@
             }
         );
         $( "#future" ).click(function() {
-            $('.pie-chart__section--future').toggleClass( "hide", "slow" );
+            //$('.pie-chart__section--future').toggleClass( "hide", "slow" );
             $('#future').attr("class", "future-bg-hover");
             $('.info-bars').toggleClass( "hide", "slow" );
+            $('#pie-info-future').show();
         });
         $( "#pie-chart.text-left #future" ).click(function() {
             $('#chart-svg').attr("class", "future-bg");
         });
         $( ".pie-chart__section--future .close-chart-info" ).click(function() {
-            $('.pie-chart__section--future').toggleClass( "hide" );
+            $('.pie-chart__section--future').hide();
             $('.info-bars').toggleClass( "hide" );
         });
 
@@ -211,37 +251,47 @@
             }
         );
         $( "#freedom" ).click(function() {
-            $('.pie-chart__section--freedom').toggleClass( "hide", "slow" );
+            //$('.pie-chart__section--freedom').toggleClass( "hide", "slow" );
             $('#freedom').attr("class", "freedom-bg-hover");
             $('.info-bars').toggleClass( "hide", "slow" );
+            $('#pie-info-freedom').toggle();
         });
         $( "#pie-chart.text-left #freedom" ).click(function() {
             $('#chart-svg').attr("class", "freedom-bg");
         });
         $( ".pie-chart__section--freedom .close-chart-info" ).click(function() {
-            $('.pie-chart__section--freedom').toggleClass( "hide" );
+            $('.pie-chart__section--freedom').hide();
             $('.info-bars').toggleClass( "hide" );
         });
 
         //congregation
-        $("#pie-chart.text-center #congregatio, #pie-chart-mobile #congregatio").hover(function () {
+        $("#pie-chart.text-center #congregation, #pie-chart-mobile #congregation").hover(function () {
                 $('#chart-svg, #pie-chart-mobile #chart-svg').attr("class", "congregation-bg");
             },
             function () {
                 $('#chart-svg, #pie-chart-mobile #chart-svg').attr("class", "two-year-bg");
             }
         );
-        $( "#congregatio" ).click(function() {
-            $('.pie-chart__section--congregation').toggleClass( "hide", "slow" );
-            $('#congregatio').attr("class", "congregation-bg-hover");
+        $( "#congregation" ).click(function() {
+            //$('.pie-chart__section--congregation').toggleClass( "hide", "slow" );
+            $('#congregation').attr("class", "congregation-bg-hover");
             $('.info-bars').toggleClass( "hide", "slow" );
+            $('#pie-info-congregation').show();
         });
-        $( "#pie-chart.text-left #congregatio" ).click(function() {
+        $( "#pie-chart.text-left #congregation" ).click(function() {
             $('#chart-svg').attr("class", "congregation-bg");
         });
         $( ".pie-chart__section--congregation .close-chart-info" ).click(function() {
-            $('.pie-chart__section--congregation').toggleClass( "hide" );
+            $('.pie-chart__section--congregation').hide();
             $('.info-bars').toggleClass( "hide" );
+        });
+
+        $('.close-chart-info').click(function() {
+            $('.pie-chart__section').hide();
+            $('#pie-chart').removeClass('text-left');
+            $('#pie-chart').addClass("text-center");
+            $('#pie-chart').addClass('large-centered medium-centered');
+            $('.info-bars').toggleClass("hide", "slow");
         });
 
         //mobile
@@ -257,7 +307,7 @@
         $( "#pie-chart-mobile #freedom" ).click(function() {
             $('.pie-chart__section--freedom').toggleClass( "hide", "slow" );
         });
-        $( "#pie-chart-mobile #congregatio" ).click(function() {
+        $( "#pie-chart-mobile #congregation" ).click(function() {
             $('.pie-chart__section--congregation').toggleClass( "hide", "slow" );
         });
 
