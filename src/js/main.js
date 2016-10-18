@@ -97,26 +97,6 @@
 
         });
 
-        // This validates the data in the commitment form and also changes
-        // the button to "Thank you" when it is clicked.
-        $("#commitmentcard").submit(
-            function( event ) {
-                $("#results").load( "insertcard.php", $("#commitmentcard").serialize(), function() {
-                    if ($("#results").html() != '<em>Oops! Required information is missing.</em>') {
-                        $("#commitment-btn").val("Submitted");
-                        $('#commitment-btn').attr("disabled", true);
-                    }
-                });
-                event.preventDefault();
-            });
-
-            $("#normal-commitment, #additional-commitment, #resource-commitment").focusout(function(){
-                if ($(this).val == '') {
-                    $(this).val = 0;
-                }
-            }
-        );
-
         $(".section--commitment #normal-commitment, .section--commitment #additional-commitment, .section--commitment #resource-commitment, .calc-section #earnings").on("blur", function() {
           if ($(this).val() == "") {
             $(this).val(this.defaultValue);
