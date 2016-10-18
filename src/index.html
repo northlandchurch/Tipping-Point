@@ -516,46 +516,65 @@
                     <form action="mail.php" method="post">
                         <div class="row">
                             <div class="small-12 medium-9 medium-centered large-9 large-centered columns">
-                                <p class="commitment-section__step">Step 1</p>
-                                <label class="commitment-section__label">Name</label>
-                                <input type="text" name="name">
+                                <label class="commitment-section__label">Name <span class="isrequired">*</span></label>
+                                <input type="text" name="name" required="required">
 
-                                <label class="commitment-section__label">Address</label>
-                                <input type="text" name="address">
+                                <label class="commitment-section__label">Street Address <span class="isrequired">*</span></label>
+                                <input type="text" name="address" required="required">
+
+                                <label class="commitment-section__label">City <span class="isrequired">*</span></label>
+                                <input type="text" name="city" required="required">
+
+                                <label class="commitment-section__label">State / Province <span class="isrequired">*</span></label>
+                                <input type="text" name="state" required="required">
+
+                                <label class="commitment-section__label">Zipcode / Postal Code <span class="isrequired">*</span></label>
+                                <input type="text" name="zipcode" required="required">
+                                
+                                <label class="commitment-section__label">Country <span class="isrequired">*</span></label>
+                                <input type="text" name="country" required="required">
 
                                 <label class="commitment-section__label">Phone</label>
                                 <input type="text" name="phone">
 
-                                <label class="commitment-section__label">Email</label>
-                                <input type="text" name="email">
+                                <label class="commitment-section__label">Email <span class="isrequired">*</span><sup>&dagger;</sup></label>
+                                <input type="email" name="email" required="required">
 
-                                <label class="commitment-section__label">What step are you taking in your giving journey?</label>
-                                    <select name="steps">
-                                        <option value="">Select your step</option>
-                                        <option value="never">Not previously given to Northland Church</option>
-                                        <option value="start">I am starting to give back to God a portion of what He has given me to Northland Church.</option>
-                                        <option value="consistent">I am intentionally giving in a consistent way to Northland Church.</option>
-                                        <option value="tithing">I am faithfully giving 10% of my income to Northland Church.</option>
-                                        <option value="extravagant">I am giving beyond my tithe to Northland Church.</option>
-                                    </select>
+                                <label class="commitment-section__label">Where do you worship? <span class="isrequired">*</span></label>
+                                <select name="worshiplocation" required="required">
+                                    <option value="">Select location</option>
+                                    <option value="Longwood">Longwood</option>
+                                    <option value="Oviedo">Oviedo</option>
+                                    <option value="Lake County">Lake County</option>
+                                    <option value="Online">Online</option>
+                                </select>
 
-                                <p class="commitment-section__step">Step 2</p>
+                                <label class="commitment-section__label">What step are you taking in your giving journey? <span class="isrequired">*</span></label>
+                                    <select name="steps" required="required">
+                                    <option value="">Select your step</option>
+                                    <option value="start">I will start to give back to God through Northland.</option>
+                                    <option value="consistent">I will give in a consistent way to God through Northland.</option>
+                                    <option value="tithing">I will faithfully give 10% of my income to God through Northland.</option>
+                                    <option value="extravagant">I will give beyond my tithe to God through Northland.</option>
+                                </select>
 
-                                <label class="commitment-section__label">What I normally give in a year.</label>
-                                <input id="normal-commitment" type="text" name="normal" value="0">
+                                <label class="commitment-section__label">My current giving (annually)</label>
+                                <input id="normal-commitment" type="number" min="0" name="normal" value="0" required="required">
 
-                                <label class="commitment-section__label">My Additional Annual Generous Commitment to Tipping Point</label>
-                                <input id="additional-commitment" type="text" name="additional" value="0">
+                                <label class="commitment-section__label">My addtional giving (annually)</label>
+                                <input id="additional-commitment" type="number" min="0" name="additional" value="0" required="required">
 
-                                <label class="commitment-section__label">My Resource Gift (stock, savings, property, etc)</label>
-                                <input id="resource-commitment" type="text" name="resource" value="0">
+                                <label class="commitment-section__label">My Resource Gift (selling of assets/possessions)</label>
+                                <input id="resource-commitment" type="number" min="0" name="resource" value="0" required="required">
 
                                 <p><button class="button button-submit" type="button">Calculate Commitment</button></p>
 
                                 <label class="commitment-section__label">One Year Commitment Total</label>
-                                <input id="total-commitment" type="text" name="total" value="" readonly>
-
-                                <p><input class="button button-submit" type="submit" value="Submit Commitment"></p>
+                                <input id="total-commitment" type="text" name="total" value="" readonly required="required">
+                                <p id="results" style="font-size:2em;"></p>
+                                <p><input id="commitment-btn" class="button button-submit" type="submit" value="Submit Commitment"></p>
+                                <p class="instructions"><span class="isrequired">*</span> Indicates required fields.<p>
+                                <p class="instructions">&dagger; We appreciate your providing an email address so that we can follow up with you occasionally about your giving journey. Rest assured, we will not share your information with third parties.</p>
 
                             </div>
                         </div>
@@ -589,7 +608,7 @@
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="./lib/jquery/dist/jquery.min.js"><\/script>')</script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
 
         <!-- foundation js -->
         <script src="./lib/foundation/js/foundation.min.js"></script>

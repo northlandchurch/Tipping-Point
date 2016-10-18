@@ -83,6 +83,17 @@
         line-height: 2.5rem;
         display: inline-block;
         width: 2%;
+
+        &.isrequired {
+            color: #d34745;
+            font-size: inherit;
+        }
+    }
+    p {
+        &.instructions {
+            color:rgba(255, 255, 255, 0.7);
+            font-size: inherit;
+        }
     }
     select {
         font-size: rem-calc(28);
