@@ -112,6 +112,37 @@
                         <p class="video__description">The people of Northland are eyewitnesses to what God is doing as we link together for worship and service everywhere, every day.</p>
                     </div>
                 </div>
+                <!-- <div class="row videos">
+                    <div class="video small-12 medium-4 columns small-only-text-center">
+                        <div class="video__img player-button" data-reveal-id="videoModal" data-video-id="187831732">
+                            <img src="/img/thumbs/">
+                        </div>
+
+                        <h2 class="video__description">Global Update</h2>
+
+                        <p class="video__description"></p>
+                    </div>
+
+                    <div class="video small-12 medium-4 columns small-only-text-center">
+                        <div class="video__img player-button" data-reveal-id="videoModal" data-video-id="187824076">
+                            <img src="/img/thumbs/">
+                        </div>
+
+                        <h2 class="video__description">Local Update</h2>
+
+                        <p class="video__description"></p>
+                    </div>
+
+                    <div class="video small-12 medium-4 columns small-only-text-center">
+                        <div class="video__img player-button" data-reveal-id="videoModal" data-video-id="187824456">
+                            <img src="/img/thumbs/">
+                        </div>
+
+                        <h2 class="video__description">Church Planting Update</h2>
+
+                        <p class="video__description"></p>
+                    </div>
+                </div> -->
             </div>
         </section>
 
@@ -645,7 +676,7 @@
             // the button to "Thank you" when it is clicked.
             $("#commitmentcard").submit(
                 function( event ) {
-                    $("#results").load( "insertcard.php", $("#commitmentcard").serialize(), function() {
+                    $("#results").load( "./lib/insertcard.php", $("#commitmentcard").serialize(), function() {
                         if ($("#results").html() != '<em>Oops! Required information is missing.</em>') {
                             $("#commitment-btn").val("Submitted");
                             $('#commitment-btn').attr("disabled", true);

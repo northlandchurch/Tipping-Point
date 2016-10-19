@@ -47,3 +47,6 @@ bower_components
 
 # production code
 dist
+
+# db configurations
+db-config.php

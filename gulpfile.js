@@ -11,7 +11,9 @@ var paths = {
     html:    ['./src/**/*.html'],
     scripts: ['./src/js/**/*.js'],
     styles:  ['./src/sass/**/*.scss'],
-    images:  ['./src/img/**/*']
+    images:  ['./src/img/**/*'],
+    php: ['./src/lib/*.php'],
+    swiftmailer: ['./src/swiftmailer/**/*']
 };
 
 // Clean bower_components in dist/lib/
@@ -75,11 +77,22 @@ gulp.task('html', function() {
         .pipe(connect.reload());
 });
 
+gulp.task('php', function() {
+    return gulp.src(paths.php)
+        .pipe(gulp.dest('dist/lib/'));
+});
+
+gulp.task('swiftmailer', function() {
+    return gulp.src(paths.swiftmailer)
+        .pipe(gulp.dest('dist/lib/swiftmailer/'));
+})
+
 // Copy everything from src except uncompiled sass and js
 gulp.task('dist', function(){
     return gulp.src([
         './src/**/*',
         '!./src/sass/**/*',
+        '!./src/swiftmailer/**/*',
         '!./src/js/**/*'
     ])
         .pipe(gulp.dest('dist'));
@@ -110,6 +123,10 @@ gulp.task('watch', function() {
     watch(paths.images, function() {
         gulp.start('images', 'dist');
     });
+
+    watch(paths.php, function() {
+        gulp.start('php', 'dist');
+    });
 });
 
 // The default task (called when you run `gulp` from cli)
@@ -120,6 +137,8 @@ gulp.task('default', [
     'scripts',
     'styles',
     'html',
+    'php',
+    'swiftmailer',
     'connect',
     'watch'
 ]);
