@@ -15,7 +15,7 @@ if ( empty($_GET['name']) || empty($_GET['email']) || empty($_GET['steps']) || e
 // Insert card into database NEEDS ERROR TRAP
 // ****************************************************************
   // Call datbase
-  require_once './lib/db-config.php';
+  require_once './db-config.php';
 
   // A tool to remove dollar sign and commas from user input
   function cleanup($junk) {
@@ -39,7 +39,7 @@ if ( empty($_GET['name']) || empty($_GET['email']) || empty($_GET['steps']) || e
 // ****************************************************************
 // Send email. (need to catch if they gave a junkie email address.)
 // ****************************************************************
-  require_once './lib/swiftmailer/swiftmailer-5.x/lib/swift_required.php';
+  require_once './swiftmailer/swiftmailer-5.x/lib/swift_required.php';
 
   // Create the Transport
   $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'tls')
