@@ -71,6 +71,20 @@ if ( empty($_GET['name']) || empty($_GET['email']) || empty($_GET['steps']) || e
 
 BODY;
 
+	// Plain Text email body
+	$textBody = "
+		We are so thankful for your Tipping Point commitment! We know that the best is yet to come, and we're thrilled to be on this journey with you.
+
+		Wondering when to begin? You can begin right away! All future contributions will be applied toward your one-year commitment.
+
+		Current annual giving: $emailnormal
+		Additional annual giving: $emailadditional
+		Resource giving: $emailresource
+		TOTAL 1 YEAR COMMITMENT: $emailtotal
+
+		Questions? Visit http://tippingpoint.northlandchurch.net and click \"Questions?\"
+	";
+
 
   // Create the message
   $message = Swift_Message::newInstance()
@@ -81,7 +95,7 @@ BODY;
     ->setTo(array($_GET['email'] => $emailname))
     ->setBody($HTMLbody)
     // And optionally an alternative body
-    ->addPart($HTMLbody)
+    ->addPart($textBody)
     ;
 
     // Create the Mailer using your created Transport
@@ -93,5 +107,5 @@ BODY;
 // ****************************************************************
 // Confirmation Message
 // ****************************************************************
-echo "<strong>Thank you!<br>A confirmation email has been sent.</strong>"
+echo "<strong>Thank you!<br>A confirmation email has been sent.</strong>";
 ?>
