@@ -187,7 +187,7 @@
         $( "#community" ).click(function() {
             //$('.pie-chart__section--community').toggleClass( "hide", "slow" );
             $('#community').attr("class", "community-bg-hover");
-            $('.info-bars').toggleClass( "hide", "slow" );
+            $('.info-bars').removeClass("hide");
             $('#pie-info-community').show();
         });
         $( "#pie-chart.text-left #community" ).click(function() {
@@ -195,7 +195,7 @@
         });
         $( ".pie-chart__section--community .close-chart-info" ).click(function() {
             $('.pie-chart__section--community').hide();
-            $('.info-bars').toggleClass( "hide" );
+            $('.info-bars').addClass("hide");
         });
 
         //world
@@ -209,7 +209,7 @@
         $( "#world" ).click(function() {
             //$('.pie-chart__section--world').toggleClass( "hide", "slow" );
             $('#world').attr("class", "world-bg-hover");
-            $('.info-bars').toggleClass( "hide", "slow" );
+            $('.info-bars').removeClass("hide");
             $('#pie-info-world').show();
         });
         $( "#pie-chart.text-left #world" ).click(function() {
@@ -217,7 +217,7 @@
         });
         $( ".pie-chart__section--world .close-chart-info" ).click(function() {
             $('.pie-chart__section--world').hide();
-            $('.info-bars').toggleClass( "hide" );
+            $('.info-bars').addClass("hide");
         });
 
         //future
@@ -231,7 +231,7 @@
         $( "#future" ).click(function() {
             //$('.pie-chart__section--future').toggleClass( "hide", "slow" );
             $('#future').attr("class", "future-bg-hover");
-            $('.info-bars').toggleClass( "hide", "slow" );
+            $('.info-bars').removeClass("hide");
             $('#pie-info-future').show();
         });
         $( "#pie-chart.text-left #future" ).click(function() {
@@ -239,7 +239,7 @@
         });
         $( ".pie-chart__section--future .close-chart-info" ).click(function() {
             $('.pie-chart__section--future').hide();
-            $('.info-bars').toggleClass( "hide" );
+            $('.info-bars').addClass("hide");
         });
 
         //freedom
@@ -253,7 +253,7 @@
         $( "#freedom" ).click(function() {
             //$('.pie-chart__section--freedom').toggleClass( "hide", "slow" );
             $('#freedom').attr("class", "freedom-bg-hover");
-            $('.info-bars').toggleClass( "hide", "slow" );
+            $('.info-bars').removeClass("hide");
             $('#pie-info-freedom').toggle();
         });
         $( "#pie-chart.text-left #freedom" ).click(function() {
@@ -261,7 +261,7 @@
         });
         $( ".pie-chart__section--freedom .close-chart-info" ).click(function() {
             $('.pie-chart__section--freedom').hide();
-            $('.info-bars').toggleClass( "hide" );
+            $('.info-bars').addClass("hide");
         });
 
         //congregation
@@ -275,7 +275,7 @@
         $( "#congregation" ).click(function() {
             //$('.pie-chart__section--congregation').toggleClass( "hide", "slow" );
             $('#congregation').attr("class", "congregation-bg-hover");
-            $('.info-bars').toggleClass( "hide", "slow" );
+            $('.info-bars').removeClass("hide");
             $('#pie-info-congregation').show();
         });
         $( "#pie-chart.text-left #congregation" ).click(function() {
@@ -283,7 +283,7 @@
         });
         $( ".pie-chart__section--congregation .close-chart-info" ).click(function() {
             $('.pie-chart__section--congregation').hide();
-            $('.info-bars').toggleClass( "hide" );
+            $('.info-bars').addClass("hide");
         });
 
         $('.close-chart-info').click(function() {
@@ -291,7 +291,7 @@
             $('#pie-chart').removeClass('text-left');
             $('#pie-chart').addClass("text-center");
             $('#pie-chart').addClass('large-centered medium-centered');
-            $('.info-bars').toggleClass("hide", "slow");
+            $('.info-bars').addClass("hide");
         });
 
         //mobile
